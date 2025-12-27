@@ -6,7 +6,7 @@ The assignment is to build a light weight restful API server to power a quiz UI.
 
 ## Functional requirements
 
- - Implement 2 API resources
+ - Implement 2 API resource
    - A Quiz resource, providing at a minimum a title, description and candidate instructions.
    - A Question resource. This should support both free text  and multiple choice questions.
    - Any additional resources you feel are necessary for a functional client experience.
