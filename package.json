@@ -1,7 +1,7 @@
 {
   "name": "backend-tech-assignment",
   "version": "1.0.0",
-  "description": "",
+  "description": "The assignment is to build a light weight restful API server to power a quiz UI.",
   "homepage": "https://github.com/SynapLearning/backend-tech-assignment#readme",
   "bugs": {
     "url": "https://github.com/SynapLearning/backend-tech-assignment/issues"
@@ -16,18 +16,23 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "node build/index.js",
+    "start": "node dist/index.js",
     "debug": "tsx --inspect src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "body-parser": "^2.2.1",
+    "dotenv": "^17.2.3",
     "express": "5.1.0",
-    "http-status-codes": "2.3.0"
+    "http-status-codes": "2.3.0",
+    "mongoose": "^9.0.2"
   },
   "devDependencies": {
     "@types/express": "5.0.5",
+    "@types/mongoose": "^5.11.96",
     "@types/node": "24.10.1",
     "tsx": "4.21.0",
     "typescript": "5.9.3"
-  }
+  },
+  "keywords": []
 }

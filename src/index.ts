@@ -1,14 +1,24 @@
 import express from "express";
+import bodyParser from "body-parser";
+import * as dotenv from 'dotenv';
 import { questionRoutes } from "./routes/question-routes.js";
 import { quizRoutes } from "./routes/quiz-routes.js";
+import { connectDatabase } from "./database/connection.js";
+
+dotenv.config();
 
 const appServer = express();
 
-appServer.use(express.json());
+appServer.use(bodyParser.json());
+appServer.use(bodyParser.urlencoded({ extended: true }));
 
 appServer.use(questionRoutes);
 appServer.use(quizRoutes);
 
-appServer.listen(3000, () => {
-  console.log("Server is running on port 3000");
+connectDatabase();
+
+const PORT = process.env.PORT ?? 3000;
+
+appServer.listen(PORT, () => {
+  console.log("Server is running on port", PORT);
 });
