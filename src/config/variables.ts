@@ -16,8 +16,8 @@ const DB_ATLAS_DATABASE = process.env.MONGODB_ATLAS_DATABASE;
 const mongodbURI = `mongodb://${DB_HOST}:${DB_PORT}/${DB_DATABASE}`;
 const mongodbAtlasURI = `mongodb+srv://${DB_ATLAS_USERNAME}:${DB_ATLAS_PASSWORD}@${DB_ATLAS_CLUSTER}/${DB_ATLAS_DATABASE}?retryWrites=true&w=majority`;
 
-const config = {
+const variable = {
     dbURI: DB_TYPE == 'atlas' ? mongodbAtlasURI : mongodbURI
 }
 
-export { config };
+export { variable };

@@ -1,10 +1,10 @@
 import mongoose from 'mongoose';
 
-import { config } from '../config/index.js';
+import { variable } from '../config/variables.js';
 
 const connectDatabase = async () => {
   try {
-    const conn = await mongoose.connect(config.dbURI);
+    const conn = await mongoose.connect(variable.dbURI);
     console.log(`✅ MongoDB Connected: ${conn.connection.name}`);
 
     mongoose.connection.on('error', (err) => {

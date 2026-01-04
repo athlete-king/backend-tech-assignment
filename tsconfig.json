@@ -5,7 +5,14 @@
 
     "module": "nodenext",
     "target": "esnext",
-    "types": [],
+    "types": [
+      "node",
+      "jest",
+    ],
+    "typeRoots": [
+      "./node_modules/@types",
+    ],
+    "skipLibCheck": true,
 
     "sourceMap": true,
     "declaration": true,
@@ -16,6 +23,10 @@
     "verbatimModuleSyntax": true,
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "moduleDetection": "force",
   }
 }
