@@ -139,22 +139,6 @@ You can use [MongoDB Compass](https://www.mongodb.com/products/compass) to visua
 - `PATCH /questions/:id` - Update a question
 - `DELETE /questions/:id` - Delete a question
 
-Play a quiz:
-
-```bash
-# 1. Start a quiz attempt
-curl -X POST http://localhost:3000/quizzes/<quiz-id>/play
-
-# 2. Submit an answer
-curl -X POST http://localhost:3000/quiz-attempts/<attempt-id>/answers \
-  -H "Content-Type: application/json" \
-  -d '{
-    "questionId": "<question-id>",
-    "answer": "A function with access to outer scope"
-  }'
-
-```
-
 ## Time Spent
 
 **Total: ~3 hours**
